@@ -4,76 +4,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PS5 Web Downloader</title>
+<title>Portal de Estudos PMPE</title>
 <style>
 body {
-  background: #101522;
+  background: #101827;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 30px 15px;
-}
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  background: #202b40;
   padding: 25px;
-  border-radius: 15px;
 }
-input {
-  width: 90%;
-  padding: 15px;
-  border-radius: 8px;
-  border: none;
-  margin: 12px 0;
+h1 { color: #54d69a; }
+p { color: #cbd5e1; }
+.container {
+  max-width: 650px;
+  margin: auto;
 }
-button {
-  padding: 14px 25px;
-  background: #1769ff;
+a {
+  display: block;
+  background: #243449;
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 20px;
+  margin: 14px 0;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 20px;
 }
-p { color: #bdc9dc; }
+a:hover { background: #087e58; }
+small { color: #94a3b8; }
 </style>
 </head>
 <body>
 <div class="container">
-<h1>PS5 Web Downloader</h1>
-<p>Gerenciador de links e downloads</p>
+<h1>📚 PORTAL PMPE</h1>
+<p>Seu espaço de preparação para a Polícia Militar de Pernambuco</p>
 
-<input id="url" type="url"
-placeholder="Cole aqui o link do arquivo">
+<a href="https://www.google.com/">🔎 Google</a>
+<a href="https://www.youtube.com/">▶ Videoaulas</a>
+<a href="https://github.com/">💻 GitHub</a>
+<a href="https://www.qconcursos.com/">📝 Questões</a>
+<a href="https://www.estrategiaconcursos.com.br/">📖 Estratégia Concursos</a>
+<a href="https://www.grancursosonline.com.br/">🎓 Gran Cursos</a>
+<a href="https://www.gov.br/">🌐 Governo Federal</a>
 
-<br>
-<button onclick="downloadFile()">BAIXAR ARQUIVO</button>
-
-<p id="status">Aguardando link...</p>
+<small>Portal pessoal de estudos PMPE</small>
 </div>
-
-<script>
-function downloadFile() {
-  const url = document.getElementById("url").value;
-  const status = document.getElementById("status");
-
-  try {
-    const link = new URL(url);
-
-    if (link.protocol !== "https:" &&
-        link.protocol !== "http:") {
-      throw new Error();
-    }
-
-    status.textContent = "Abrindo link de download...";
-
-    window.location.href = link.href;
-
-  } catch (error) {
-    status.textContent = "Digite um link válido.";
-  }
-}
-</script>
 </body>
 </html>
